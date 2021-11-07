@@ -12,21 +12,25 @@ public class ButtonPanel extends JPanel implements ActionListener{
     private JButton greenButton;
     private JButton blueButton;
     private JButton redButton;
+    private JButton textButton;
 
     public ButtonPanel() {
         greenButton = new JButton("Green");
         blueButton = new JButton("Blue");
         redButton = new JButton("Red");
+        textButton = new JButton(("Text Button"));
 
         greenButton.addActionListener(this);
         blueButton.addActionListener(this);
         redButton.addActionListener(this);
+        textButton.addActionListener(this);
 
         setLayout(new FlowLayout());
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         add(greenButton);
         add(blueButton);
         add(redButton);
+        add (textButton);
     }
 
     @Override
@@ -41,5 +45,7 @@ public class ButtonPanel extends JPanel implements ActionListener{
 
         else if(source == redButton)
             setBackground(Color.RED);
+        else if (source == textButton)
+            System.out.println("Testing button");
     }
 }
