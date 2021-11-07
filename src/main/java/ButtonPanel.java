@@ -2,8 +2,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class ButtonPanel extends JPanel implements ActionListener{
 
@@ -13,12 +12,17 @@ public class ButtonPanel extends JPanel implements ActionListener{
     private JButton blueButton;
     private JButton redButton;
     private JButton textButton;
+    private JTextField poleTxt;
+    private int counter = 0;
+    private String userInput = "";
+    private final String secret = "secret";
 
     public ButtonPanel() {
         greenButton = new JButton("Green");
         blueButton = new JButton("Blue");
         redButton = new JButton("Red");
         textButton = new JButton(("Text Button"));
+        poleTxt = new JTextField("Pole Tekstowe");
 
         greenButton.addActionListener(this);
         blueButton.addActionListener(this);
@@ -31,7 +35,11 @@ public class ButtonPanel extends JPanel implements ActionListener{
         add(blueButton);
         add(redButton);
         add (textButton);
+        add(poleTxt);
+
+
     }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {

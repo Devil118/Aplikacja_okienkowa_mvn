@@ -5,7 +5,8 @@ public class Test {
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new MyFrame();
+              //  new ActionFrame();
+                new KeyTest();
             }
         });
     }
